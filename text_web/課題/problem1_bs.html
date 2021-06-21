@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行コース紹介サイト</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar {
+            font-family: 'proxima-nova', sans-serif;
+            color: #598acf;
+        }
+
+        .navbar-brand {
+            height: 70px;
+        }
+
+        .main-wrapper {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .domestic-title,
+        .abroad-title {
+            position: relative;
+        }
+
+        .menu-title {
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            color: white;
+        }
+
+        h2 {
+            font-size: 100px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .big {
+            font-size: 40px;
+        }
+
+        .image {
+            width: 100%;
+            height: 450px;
+            margin-bottom: 50px;
+        }
+
+        footer,
+        .title {
+            font-family: 'din-next-light', sans-serif;
+            color: #3b5c84;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
+        <img src="img/logo.png" class="navbar-brand" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">コース紹介 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">旅行のご予約</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <h3 class="title my-4">COURSE INTRODUCTION</h3>
+        <div>
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a href="#domestic" class="nav-link active px-4" data-toggle="tab">国内</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#abroad" class="nav-link px-4" data-toggle="tab">海外</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="domestic" class="tab-pane active mb-5">
+                    <div class="domestic-title">
+                        <img src="img/domestic.jpg" class="image" alt="国内旅行">
+                        <div class="menu-title">
+                            <h2>Japan</h2>
+                            <h3 class="big">国内旅行</h3>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="cards m-3 row">
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/kyoto.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">京都寺院巡りコース</h6>
+                                        <p class="card-text">世界遺産にも指定されている歴史のある寺院を巡りましょう。夜はライトアップを見ながらのお食事も楽しめます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/okinawa.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">沖縄海水浴コース</h6>
+                                        <p class="card-text">日本一綺麗な海で、海水浴やダイビングを楽しみましょう。珍しい魚達に会えるかも！沖縄ならではの料理もたくさんあります。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/tokyo.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">東京大都会コース</h6>
+                                        <p class="card-text">日本一の大都市・東京の文化を肌で感じましょう。最終日にはあの大人気テーマパークも楽しめちゃいます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/hokkaido.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">北海道自然堪能コース</h6>
+                                        <p class="card-text">数日かけて函館・小樽・札幌を巡り北海道の食と大自然を存分に堪能します。春夏秋冬いつでも楽しめます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="abroad" class="tab-pane mb-5">
+                    <div class="abroad-title">
+                        <img src="img/abroad.jpg" class="image" alt="海外旅行">
+                        <div class="menu-title">
+                            <h2>Overseas</h2>
+                            <h3 class="big">海外旅行</h3>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="cards m-3 row">
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/itally.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">イタリア古都巡りコース</h6>
+                                        <p class="card-text">イタリアの歴史ある街並みを楽しみましょう。本場のイタリアンや、サッカー観戦なども楽しめます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="co-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/china.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">中国都市観光コース</h6>
+                                        <p class="card-text">
+                                            脈々と受け継がれてきた歴史と近代文明が融合する国、中国はもちろん見所がたくさん！絶品の中華料理も是非体験して見ましょう。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+                                    <img src="img/singapore.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">シンガポールコース</h6>
+                                        <p class="card-text">アジア旅行の定番・シンガポールを優雅に旅しましょう。人気スポットから穴場まで、たっぷり堪能しましょう。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="card">
+
+                                    <img src="img/la.jpg" alt="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h6 class="card-title border-bottom border-primary">ロサンゼルスコース</h6>
+                                        <p class="card-text">アメリカ最大級の都市・ロサンゼルス。テーマパークやアメリカ映画の"本場"、満足すること間違いなしです。</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-4 mt-5">
+        Copyright ProkidsTravel.com
+    </footer>
+</body>
+
+</html>

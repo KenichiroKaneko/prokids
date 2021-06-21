@@ -1,0 +1,474 @@
+{
+    "Q2-1. 出世しそうな人ランキング": {
+        "Takumi Nishina": {
+            "point": 20,
+            "comment": [
+                "",
+                "上司の言われたことをきちんと守りそうだから",
+                "上司の面倒くさいことにも付き合ってくれそう、部下の面倒もきっちり見てくれそう"
+            ]
+        },
+        "Seigo Kawachi": {
+            "point": 10,
+            "comment": [
+                "コミュ力もスキルも元気の良さもハイレベル",
+                "一人で何でも作れそう"
+            ]
+        },
+        "Ayaka Tanagura": {
+            "point": 16,
+            "comment": [
+                "将来、社長になっている気がするから",
+                "一通り仕事を覚えたらさっさと独立して会社経営してそう。",
+                ""
+            ]
+        },
+        "Masayuki(Merry Christmas)CEO": {
+            "point": 9,
+            "comment": [
+                "",
+                ""
+            ]
+        },
+        "金子健一郎": {
+            "point": 11,
+            "comment": [
+                "先輩に気に入られそう",
+                "仕事が早そうだから"
+            ]
+        },
+        "kurokawa": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "tomoka okabe": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "Kaiji Okusako": {
+            "point": 10,
+            "comment": [
+                "名前がカイジだから",
+                ""
+            ]
+        },
+        "Hitoshi_Nakazawa": {
+            "point": 11,
+            "comment": [
+                "",
+                "(チャラ男だと思われてるけど笑)実は行動力と熱量がすごい！コミュ力高い！"
+            ]
+        },
+        "takumi Kasai": {
+            "point": 5,
+            "comment": [
+                "野望を秘めてそう"
+            ]
+        }
+    },
+    "Q3-1. 残業をめっちゃしそうな人ランキング": {
+        "Saki Tome": {
+            "point": 15,
+            "comment": [
+                "",
+                "自分の納得するまで作業してそうだと思いました",
+                "色々な業務を行っているため"
+            ]
+        },
+        "Hana Enomoto": {
+            "point": 9,
+            "comment": [
+                "７人の生徒を担当しているということで、タスクを多く引き受けそうだから",
+                ""
+            ]
+        },
+        "tomoka okabe": {
+            "point": 13,
+            "comment": [
+                "責任感が強いから",
+                ""
+            ]
+        },
+        "takumi Kasai": {
+            "point": 13,
+            "comment": [
+                "キャパを超える仕事が降ってきそう（それでも引きうけてくれそう）",
+                "気づいたら会社に笠井さんしか残ってなかった...  みたいな状況がありそうだから"
+            ]
+        },
+        "Seigo Kawachi": {
+            "point": 9,
+            "comment": [
+                "残業を残業と思わず、好きでずっと仕事していそう。",
+                ""
+            ]
+        },
+        "Masayuki(Merry Christmas)CEO": {
+            "point": 5,
+            "comment": [
+                ""
+            ]
+        },
+        "Ayaka Tanagura": {
+            "point": 12,
+            "comment": [
+                "仕事をたくさん任されそう",
+                "なんとなく"
+            ]
+        },
+        "kurokawa": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "Takumi Nishina": {
+            "point": 5,
+            "comment": [
+                "真面目だから"
+            ]
+        },
+        "金子健一郎": {
+            "point": 10,
+            "comment": [
+                "",
+                "勤勉だから！完璧に出来るまでこだわって仕事が終わらない、かも？"
+            ]
+        },
+        "Shino Akanuma 赤沼志野": {
+            "point": 5,
+            "comment": [
+                "とても優しいから。"
+            ]
+        }
+    },
+    "Q4-1. 生徒と仲良さそうな人ランキング": {
+        "Masayuki(Merry Christmas)CEO": {
+            "point": 15,
+            "comment": [
+                "",
+                "子供の気持ちを誰よりも分かっていそう",
+                ""
+            ]
+        },
+        "Kaiji Okusako": {
+            "point": 12,
+            "comment": [
+                "子ども扱いしなそうだから",
+                "原さんと授業の話やをよくしてる。授業の参考例を出したい時は、奥迫さんの生徒さんが話題になる。"
+            ]
+        },
+        "Miuko Kagawa": {
+            "point": 18,
+            "comment": [
+                "生徒と距離が近くて、うふふ〜っていう楽しそうな先生の声が聞こえる",
+                "ノリがいい",
+                ""
+            ]
+        },
+        "Hitoshi_Nakazawa": {
+            "point": 6,
+            "comment": [
+                "誰とでもすぐに打ち解けられるイメージだから"
+            ]
+        },
+        "Hana Enomoto": {
+            "point": 15,
+            "comment": [
+                "生徒の話を引き出すのが上手そう。",
+                "優しい雰囲気で話しやすいから",
+                ""
+            ]
+        },
+        "kurokawa": {
+            "point": 5,
+            "comment": [
+                ""
+            ]
+        },
+        "tomoka okabe": {
+            "point": 10,
+            "comment": [
+                "信頼されてそう",
+                "口調が柔らかい"
+            ]
+        },
+        "Ayaka Tanagura": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "Takumu Takahashi": {
+            "point": 5,
+            "comment": [
+                "持ち前の顔面で女子生徒から好かれそう"
+            ]
+        },
+        "Sakura Shirai": {
+            "point": 5,
+            "comment": [
+                ""
+            ]
+        },
+        "Saki Tome": {
+            "point": 5,
+            "comment": [
+                "ゲームの話で生徒と盛り上がりそう"
+            ]
+        }
+    },
+    "Q5-1. 朝からテンション高そうな人ランキング": {
+        "Masayuki(Merry Christmas)CEO": {
+            "point": 30,
+            "comment": [
+                "",
+                "\nいつも元気だから",
+                "",
+                "なんとなくのイメージです笑",
+                "",
+                "見るからに"
+            ]
+        },
+        "Sakura Shirai": {
+            "point": 10,
+            "comment": [
+                "アラームの音楽がなると同時にその曲を熱唱しながら布団からでてそう",
+                "「今日は〇〇に出かけるぞー！！」とか張り切ってそう。"
+            ]
+        },
+        "Hitoshi_Nakazawa": {
+            "point": 18,
+            "comment": [
+                "見ての通り",
+                "",
+                ""
+            ]
+        },
+        "Hana Enomoto": {
+            "point": 7,
+            "comment": [
+                "早い時間の授業もこなしてくれるので元気"
+            ]
+        },
+        "Shino Akanuma 赤沼志野": {
+            "point": 7,
+            "comment": [
+                "よく朝に活動しているから"
+            ]
+        },
+        "Miuko Kagawa": {
+            "point": 10,
+            "comment": [
+                "元気そうなイメージ",
+                "わたし朝からテンション高いです"
+            ]
+        },
+        "Ayaka Tanagura": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "Hayamasa Ichitsuka": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "takumi Kasai": {
+            "point": 5,
+            "comment": [
+                "かさいさんは朝起きるの早いというお話を聞いたことあるから。"
+            ]
+        },
+        "Seigo Kawachi": {
+            "point": 5,
+            "comment": [
+                "テンションの高さなら河内くん！好きなことを延々と喋っていられそう！"
+            ]
+        }
+    },
+    "Q6-1. ニュースをめっちゃチェックしてそうな人ランキング": {
+        "Masayuki(Merry Christmas)CEO": {
+            "point": 20,
+            "comment": [
+                "",
+                "",
+                "日経新聞をすごく読んでそうだから",
+                "言わずもがな"
+            ]
+        },
+        "takumi Kasai": {
+            "point": 5,
+            "comment": [
+                "ニュース番組ではなく、ネットや新聞でチェックしてそう。活字が好きそう"
+            ]
+        },
+        "Hana Enomoto": {
+            "point": 11,
+            "comment": [
+                "直感",
+                ""
+            ]
+        },
+        "金子健一郎": {
+            "point": 12,
+            "comment": [
+                "情報収集のアンテナがたかそうなイメージ",
+                "なんとなく"
+            ]
+        },
+        "Takumi Nishina": {
+            "point": 11,
+            "comment": [
+                "真面目なイメージがあるので、ニュースもチェックしている気がする",
+                "学生なのに既にサラリーマン姿が想像できる。"
+            ]
+        },
+        "Sakura Shirai": {
+            "point": 7,
+            "comment": [
+                "世情に詳しそう"
+            ]
+        },
+        "Shino Akanuma 赤沼志野": {
+            "point": 18,
+            "comment": [
+                "",
+                "",
+                "",
+                "お子さんのために情報集めていそう。天気もきちんとチェックしていそう。"
+            ]
+        },
+        "Ayaka Tanagura": {
+            "point": 10,
+            "comment": [
+                "しっかりしてそう",
+                "真面目！"
+            ]
+        },
+        "Seigo Kawachi": {
+            "point": 6,
+            "comment": [
+                ""
+            ]
+        }
+    },
+    "Q7-1. 語り出したら長そうな人ランキング": {
+        "Takumi Nishina": {
+            "point": 6,
+            "comment": [
+                ""
+            ]
+        },
+        "Seigo Kawachi": {
+            "point": 58,
+            "comment": [
+                "多くの沼にはまってそう",
+                "経験談",
+                "去年そういう場面を見たようなw",
+                "前にずっと語っていたから",
+                "長そうというか長い",
+                "知識の宝物庫",
+                "",
+                "",
+                "長くしゃべるところが好きです。",
+                "好きなこと話し始めたら止まらない！知識量すごすぎる！"
+            ]
+        },
+        "Hitoshi_Nakazawa": {
+            "point": 5,
+            "comment": [
+                "独自の理論を持っていそう。"
+            ]
+        },
+        "Masayuki(Merry Christmas)CEO": {
+            "point": 9,
+            "comment": [
+                "",
+                ""
+            ]
+        },
+        "Saki Tome": {
+            "point": 14,
+            "comment": [
+                "ゲームの話をしてる時に熱量が半端なかったから",
+                "機械とかゲームとかの話めっちゃ語ってそう",
+                "こだわりが強そう"
+            ]
+        },
+        "kurokawa": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        },
+        "Kaiji Okusako": {
+            "point": 4,
+            "comment": [
+                ""
+            ]
+        }
+    },
+    "Q8-1. 子供の頃、神童と呼ばれてそうな人ランキング": {
+        "takumi Kasai": {
+            "point": 18,
+            "comment": [
+                "",
+                "涼しい顔して難しい問題をどんどん解いていそう。",
+                "飄々としているから"
+            ]
+        },
+        "Kaiji Okusako": {
+            "point": 24,
+            "comment": [
+                "小学１年生の頃すでに微分方程式を使いこなしてそう",
+                "かしこーだから",
+                "なんとなく、そうであってほしいw",
+                "カイジだから"
+            ]
+        },
+        "Saki Tome": {
+            "point": 16,
+            "comment": [
+                "",
+                "",
+                "ゲームやプログラミングなどいろいろ極めている方なので、子供の頃から才能あったんだろうなと思います！"
+            ]
+        },
+        "金子健一郎": {
+            "point": 9,
+            "comment": [
+                "なんとなく子供の頃から優秀なイメージがあります",
+                "アイコンの雰囲気"
+            ]
+        },
+        "Seigo Kawachi": {
+            "point": 19,
+            "comment": [
+                "",
+                "",
+                "",
+                "異端感"
+            ]
+        },
+        "Ayaka Tanagura": {
+            "point": 9,
+            "comment": [
+                "イメージ",
+                "デザイン天才！"
+            ]
+        },
+        "Hayamasa Ichitsuka": {
+            "point": 5,
+            "comment": [
+                ""
+            ]
+        }
+    }
+}

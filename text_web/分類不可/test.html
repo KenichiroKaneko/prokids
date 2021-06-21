@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot</title>
+</head>
+<style>
+    #slotpattern {
+        text-align: center;
+    }
+
+    .slot {
+        font-size: 50px;
+        color: white;
+        padding: 7px;
+        margin: 10px;
+        background-color: powderblue;
+        width: 100px;
+        display: inline-block;
+        border-radius: 15px;
+    }
+
+    .btn {
+        padding: 20px 50p;
+        background-color: lightgreen;
+        color: white;
+        padding: 8px;
+        width: 100px;
+        box-shadow: 0 1px 0 gray;
+        border-radius: 8px;
+    }
+
+    #startBtn {
+        background-color: orangered;
+    }
+</style>
+
+<body>
+    <div id="slotpattern">
+        <div>
+            <div class="slot" id="pattern1">a</div>
+            <div class="slot" id="pattern2">b</div>
+            <div class="slot" id="pattern3">c</div>
+        </div>
+        <div>
+            <input class="btn" type="button" value="stop1" onclick="stop(0);">
+            <input class="btn" type="button" value="stop2" onclick="stop(1);">
+            <input class="btn" type="button" value="stop3" onclick="stop(2);">
+        </div>
+        <div>
+            <input class="btn" type="button" id="startBtn" value="start" onclick="start();">
+        </div>
+    </div>
+    <script>
+        var timerList = [];
+
+        function start() {
+            runSlot(0, "pattern1");
+            runSlot(1, "pattern2");
+            runSlot(2, "pattern3");
+        }
+        // 再帰的にスロットの文字をコロコロ切り替える関数
+        function runSlot(n, slotID) {
+            var slot = document.getElementById(slotID);
+
+            if (ran < 1) {
+                slot.textContent = "a";
+            } else if (ran < 2) {
+                slot.textContent = "b";
+            } else {
+                slot.textContent = "c";
+            }
+
+            timerList[n] = setTimeout(function () {
+                runSlot(n, slotID);
+            }, 50);
+        };
+
+        function stop(n) {
+            clearTimeout(timerList[n])
+        }
+
+    </script>
+</body>
+
+</html>

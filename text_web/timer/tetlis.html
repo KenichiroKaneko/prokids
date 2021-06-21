@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="timer">0</p>
+    <script>
+        // ページ読み込み時にsetIntervalを設定する
+        window.onload = setInterval(UP, 1000);
+
+        // timerの数字を＋１する
+        function UP() {
+            var timer = document.getElementById("timer");
+            var numStr = timer.textContent;
+            // ↓String型の数字をInt型の数字に変換する
+            var numInt = parseInt(numStr);
+            timer.textContent = numInt + 1;
+        }
+    </script>
+</body>
+</html>

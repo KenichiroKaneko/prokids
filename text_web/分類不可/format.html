@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行予約サイト</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="msg">
+            HAVE A NICE TRIP!
+        </p>
+        <div class="complete-msg">登録完了しました</div>
+        <div class="card">
+            <h2>ご予約の登録</h2>
+            <div class="form-wrapper">
+                <select name="" id="courses">
+                    <option value="0" hidden>コース</option>
+                    <option value="1">京都寺院巡りコース</option>
+                    <option value="2">沖縄海水浴コース</option>
+                    <option value="3">イタリア古都巡りコース</option>
+                    <option value="4">中国都市観光コース</option>
+                </select>
+                <div class="error-msg" id="select-error"></div>
+            </div>
+            <div class="form-wrapper">
+                <input type="text" id="datepicker" placeholder="出発予定日">
+                <div class="error-msg" id="datepicker-error"></div>
+            </div>
+
+            <button class="btn resister-btn">登録</button>
+        </div>
+    </div>
+</body>
+</html>

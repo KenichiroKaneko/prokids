@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スロットマシーン</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+    
+        .slot {
+            font-size: 50px;
+            color: white;
+            padding: 7px;
+            margin: 10px;
+            background-color: powderblue;
+            width: 100px;
+            display: inline-block;
+            border-radius: 15px;
+        }
+    
+        .btn {
+            padding: 20px 50p;
+            background-color: springgreen;
+            color: white;
+            padding: 7px;
+            margin: 20px;
+            width: 100px;
+            box-shadow: 0 1px 0 lightgray;
+            border-radius: 5px;
+        }
+    
+        #startBtn {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+    
+        .slot {
+            font-size: 50px;
+            color: white;
+            padding: 7px;
+            margin: 10px;
+            background-color: powderblue;
+            width: 100px;
+            display: inline-block;
+            border-radius: 15px;
+        }
+    
+        .btnS {
+            padding: 20px 50p;
+            background-color: springgreen;
+            color: white;
+            padding: 7px;
+            margin: 20px;
+            width: 100px;
+            box-shadow: 0 1px 0 lightgray;
+            border-radius: 5px;
+        }
+    
+        #startBtn {
+            background-color: tomato;
+        }
+    </style>
+    <div id="slotmachine">
+        <div>
+            <!-- スロット -->
+            <div class="slot" id="slot1">a</div>
+            <div class="slot" id="slot2">b</div>
+            <div class="slot" id="slot3">c</div>
+        </div>
+        <div>
+            <!-- ストップボタン -->
+            <input class="btnS" type="button" value="stop1" onclick="stop(0);">
+            <input class="btnS" type="button" value="stop2" onclick="stop(1);">
+            <input class="btnS" type="button" value="stop3" onclick="stop(2);">
+        </div>
+        <div>
+            <!-- スタートボタン -->
+            <input class="btnS" id="startBtn" type="button" value="start" onclick="start();">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var slotPic = ["a","b","c"];
+        var timerList =[];
+        var slot1 = document.getElementById("slot1");
+        var slot2 = document.getElementById("slot2");
+        var slot3 = document.getElementById("slot3");
+
+        function start() {
+            runSlot(0, slot1);
+            runSlot(1, slot2);
+            runSlot(2, slot3);
+        }
+
+        function runSlot(n, slot) {
+            slot.textContent = slotPic[Math.floor(Math.random() * slotPic.length)];
+            timerList[n] = setTimeout(function(){
+                runSlot(n, slot)
+            },50);
+        }
+
+        function stop(n){
+            clearTimeout(timerList[n]);
+        }
+    </script>
+</body>
+</html>

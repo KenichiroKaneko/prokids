@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行予約ページ</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: url(img/cover.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .logo-img {
+            height: 60px;
+        }
+        
+
+        .msg {
+            margin-top: 80px;
+            margin-bottom: 20px;
+            color: white;
+            font-family: "din-next-light";
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .card {
+            padding: 10px 20px;
+            width: 500px;
+            background-color: rgba(255, 255, 255, .5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-family: 'proxima-nova', sans-serif;
+        }
+
+        .form-wrapper {
+            margin: 40px 15%;
+        }
+
+        input,select {
+            padding: 8px;
+            width: 100%;
+            box-sizing:border-box;
+        }
+
+        .resister-modal-wrapper {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            display: none;
+        }
+
+        .modal {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+            width: 40%;
+            border: none;
+            border-radius: 3px;
+            background-color:#007bff;
+            color: #ffffff;
+        }
+
+        .cancel-btn {
+            background-color: #dc3545;
+        }
+
+
+        .complete-msg {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            background-color:#007bff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .error-msg {
+            height: 0;
+            color: tomato;
+            font-size: small;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo-img" src="img/logo.png" alt="">
+    </header>
+
+    <p class="msg">
+        HAVE A NICE TRIP!
+    </p>
+    <div class="complete-msg">登録完了しました</div>
+    <div class="card">
+        <h2>ご予約の登録</h2>
+        <div class="form-wrapper">
+            <select name="" id="courses">
+                <option value="0" hidden>コース</option>
+                <option value="1">京都寺院巡りコース</option>
+                <option value="2">沖縄海水浴コース</option>
+                <option value="3">イタリア古都巡りコース</option>
+                <option value="4">中国都市観光コース</option>
+            </select>
+            <div class="error-msg" id="select-error"></div>
+        </div>
+        <div class="form-wrapper">
+            <input type="text" id="datepicker" placeholder="出発予定日">
+            <div class="error-msg" id="datepicker-error"></div>
+        </div>
+        
+        <button class="btn resister-btn">登録</button>
+    </div>
+
+    <div class="resister-modal-wrapper">
+        <div class="modal">
+            <div id="resister-form">
+                <h2>以下の内容で登録しますか？</h2>
+                <form action="#">
+                    <p>コース: <span id="course"></span></p>
+                    <p>出発日: <span id="date"></span></p>
+                    <button class="btn cancel-btn">キャンセル</button>
+                    <button class="btn ok-btn">はい</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            duration: 300,
+            showAnim: 'show',
+            dateFormat: 'yy年mm月dd日',
+        });
+
+        $('.resister-btn').click(function () {
+            var index = $('#courses').val();
+            var date = $('#datepicker').val();
+            var course = $('option').eq(index).text();
+            var flag = true;
+
+            if (course == "コース") {
+                $("#select-error").text("コースを選択してください");
+                flag = false;
+            }
+
+            if (date == "") {
+                $("#datepicker-error").text("出発予定日を選択してください");
+                flag = false;
+            }
+            
+            if (flag) {
+                $("#select-error").text("");
+                $("#datepicker-error").text("");
+                $('#course').text(course);
+                $('#date').text(date);
+                $('.resister-modal-wrapper').fadeIn();
+            }
+        });
+
+        $('.cancel-btn').click(function () {
+            $('.resister-modal-wrapper').fadeOut();
+        })
+
+        $('.ok-btn').click(function () {
+            $('.resister-modal-wrapper').fadeOut();
+            $('.card').fadeOut();
+            $('.complete-msg').fadeIn();
+        })
+    </script>
+</body>
+
+</html>

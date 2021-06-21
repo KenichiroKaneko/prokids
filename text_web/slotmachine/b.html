@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カウントアップ</title>
+</head>
+
+<body>
+    <button onclick="countup(1);">スタート</button>
+    <button onclick="stopCountUp();">ストップ</button>
+    <div id="a"></div>
+    <script>
+        function countup(x) {
+
+            var a = document.getElementById("a");
+            a.insertAdjacentHTML('afterbegin', `<div>${x}</div>`);
+
+            // 関数を終了する処理
+            if (x > 100) { 
+                return;
+            }
+
+            // 一定時間後に自分自身を呼び出す処理
+            stopId = setTimeout(function () { 
+                countup(x + 1);
+            }, 500);
+
+        }
+
+        function stopCountUp() {
+            var a = document.getElementById("a");
+            a.insertAdjacentHTML('afterbegin', 'ストップボタンが押されました。');
+            clearTimeout(stopId);
+        }
+    </script>
+</body>
+
+</html>

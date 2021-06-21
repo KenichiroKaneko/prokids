@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .list_nav_header {
+            display: flex;
+            list-style: none;
+        }
+
+        .list_nav_header li {
+            margin-left: 36px;
+        }
+
+        @media screen and (min-width: 601px) {
+
+            .mobile_screen {
+                display: none;
+            }
+
+            .pc_screen {
+                display: block;
+            }
+
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .pc_screen {
+                display: none;
+            }
+
+            .mobile_screen {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>メディアクエリ</h1>
+        <nav class="pc_screen">
+            <ul class="list_nav_header">
+                <li>Home</li>
+                <li>Product</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <nav class="mobile_screen">
+            <ul class="list_nav_header">
+                <li>≡</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

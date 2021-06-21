@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規会員登録</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <img src="../img/logo.png" class="page-title" alt="">
+                <form class="form-inline ml-auto">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" id="search-word" type="text"
+                        placeholder="Search..." aria-label="Search">
+                </form>
+                <button class="btn search-btn text-light my-4 mr-3" id="search">検索</button>
+                <!-- <a href="#" class="myPage btn text-light my-4">
+                    <i class="fas fa-user"></i>
+                    マイページ
+                </a> -->
+            </div>
+            <div class="container">
+                <div class="bc-nav mt-3">
+                    <a href="index.html">ホーム</a><span class="px-2">></span>会員登録
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="resister-form">
+            <div class="container p-4">
+                <h3 class="title p-3">新規会員登録</h3>
+                <div class="pl-4">
+                    お客様の会員情報を登録いたします。お間違えのないようにご記入ください。<br>
+                    <span class="necessary">*</span>：必須
+                </div>
+                <form class="mt-4 px-5 pt-3 pb-5" action="" style="background-color: whitesmoke;">
+                    <label for="email">メールアドレス <span class="necessary">*</span>：</label>
+                    <div class="input-group mb-3">
+                        <input required type="email" name="email" id="email"
+                            class="form-control required required-input" placeholder="xxxxxx@xxx.jp">
+                    </div>
+                    <label for="email-check">メールアドレス（確認）<span class="necessary">*</span>：</label>
+                    <div class="input-group mb-3">
+                        <input required type="email" name="email-check" id="email-check"
+                            class="form-control required required-input" placeholder="メールアドレスの再入力">
+                    </div>
+                    <label for="password">パスワード<span class="necessary">*</span>：</label>
+                    <div class="input-group mb-3">
+                        <input required type="password" name="password" id="password"
+                            class="form-control required required-input" placeholder="8字以上でご記入ください。">
+                    </div>
+                    <label for="password-check">パスワード（確認）<span class="necessary">*</span>：</label>
+                    <div class="input-group mb-3">
+                        <input required type="password" name="password-check" id="password-check"
+                            class="form-control required required-input" placeholder="パスワードの再入力">
+                    </div>
+                    <label for="datepicker">生年月日<span class="necessary">*</span>：</label>
+                    <div class="input-group mb-3">
+                        <input required type="text" name="date" id="datepicker"
+                            class="form-control required required-input" placeholder="YYYY年MM月DD日">
+                    </div>
+                    <p>必ず<a href="#">利用規約</a>・<a href="#">プライバシーポリシー</a>をお読みの上、下記にチェックをお願いいたします。</p>
+
+                    <p class="custom-control custom-checkbox"><input required type="checkbox" name="" id="check"
+                            class="custom-control-input required"><label for="check" class="custom-control-label"><a
+                                href="#">利用規約</a>及び<a href="#">プライバシーポリシー</a>に同意する</label>
+                    </p>
+                    <button class="btn rounded-pill text-light send-btn float-right px-5">登録</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer style="background-color: whitesmoke;">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center p-4">
+                    <img src="../img/logo.png" class="page-title" alt="">
+                    <h3 class="sns-links m-4">
+                        <a href="#"><i class="fab fa-facebook" style="color: #3B5998;"></i></a>
+                        <a href="#"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                        <a href="#"><i class="fab fa-youtube" style="color: #DA1725;"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="color: #CF2E92;"></i></a>
+                    </h3>
+                </div>
+                <div class="col-4 p-4">
+                    <p>
+                        <a href="#" class="text-dark">国内旅行</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark">海外旅行</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark">目的から探す</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark">旅行関連サービス</a>
+                    </p>
+                </div>
+                <div class="col-4 p-4 text-center">
+                    <p>
+                        <a href="#" class="myPage btn text-light">
+                            <i class="fas fa-user"></i>
+                            マイページ
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-outline-success mt-2">お問い合わせ</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-muted copyright pt-4 pb-2">
+            Copyright <i class="far fa-copyright"></i> Prokids Travel All Rights Reserved.
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript"
+        src="../bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.ja.min.js"></script>
+    <script src="resister.js"></script>
+</body>
+
+</html>

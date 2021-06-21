@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行コース紹介サイト</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        header {
+            padding-left: 15%;
+        }
+
+        body {
+            font-family: serif;
+        }
+
+        .logo {
+            height: 100px;
+        }
+
+        .main-wrapper {
+            text-align: center;
+            padding: 0 15%;
+        }
+
+        .travel-menu {
+            /* color: darkorange; */
+            background-color: white;
+            width: 20%;
+            padding: 0;
+            text-align: center;
+            margin: 0px;
+            cursor: pointer;
+            border: none;
+            float: left;
+            font-size: large;
+            margin-bottom: 1px;
+        }
+
+        .selected {
+            border-bottom: 4px darkorange solid;
+        }
+
+        .domestic-title,
+        .abroad-title {
+            position: relative;
+            display: none;
+        }
+
+        .menu-title {
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            color: white;
+        }
+
+        h2 {
+            font-size: 100px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .big {
+            font-size: 40px;
+        }
+
+        .image {
+            width: 100%;
+            height: 450px;
+            margin-bottom: 50px;
+        }
+
+        .menus {
+            width: 45%;
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: auto;
+        }
+
+        .photo-wrapper {
+            position: relative;
+        }
+
+        .travel-menus {
+            height: 60px;
+        }
+
+        .layer {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+
+        .layer:hover {
+            opacity: 0.8;
+        }
+
+        .text {
+            color: white;
+            margin: 20px;
+            position: absolute;
+            bottom: 10px;
+            text-align: left;
+        }
+
+        .domestic {
+            display: none;
+        }
+
+        .abroad {
+            display: none;
+        }
+
+        .at {
+            display: block;
+        }
+
+        .photo {
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-contents {
+            display: none;
+        }
+
+        .text-active {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" class="logo" alt="">
+        <div class="travel-menus">
+            <button class="travel-menu selected" id="domestic">
+                <p>国内旅行</p>
+            </button>
+            <button class="travel-menu" id="abroad">
+                <p>海外旅行</p>
+            </button>
+        </div>
+    </header>
+
+    <div class="domestic-title at">
+        <img src="img/domestic.jpg" class="image" alt="国内旅行">
+        <div class="menu-title">
+            <h2>Japan</h2>
+            <h3 class="big">国内旅行</h3>
+        </div>
+    </div>
+
+    <div class="abroad-title">
+        <img src="img/abroad.jpg" class="image" alt="海外旅行">
+        <div class="menu-title">
+            <h2>Overseas</h2>
+            <h3 class="big">海外旅行</h3>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="domestic at">
+            <div class="menus" id="kyoto">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/kyoto.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">京都寺院巡りコース</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">世界遺産にも指定されている歴史のある寺院を巡りましょう。夜はライトアップを見ながらのお食事も楽しめます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menus" id="okinawa">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/okinawa.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">沖縄海水浴コース</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">日本一綺麗な海で、海水浴やダイビングを楽しみましょう。珍しい魚達に会えるかも！沖縄ならではの料理もたくさんあります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menus" id="tokyo">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/tokyo.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">東京大都会コース</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">日本一の大都市・東京の文化を肌で感じましょう。最終日にはあの大人気テーマパークも楽しめちゃいます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menus" id="hokkaido">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/hokkaido.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">北海道自然堪能コース</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">数日かけて函館・小樽・札幌を巡り北海道の食と大自然を存分に堪能します。春夏秋冬いつでも楽しめます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="abroad">
+            <div class="menus" id="itally">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/itally.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">イタリア古都巡りコース</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">イタリアの歴史ある街並みを楽しみましょう。本場のイタリアンや、サッカー観戦なども楽しめます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menus" id="china">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/china.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">中国都市観光コース</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">脈々と受け継がれてきた歴史と近代文明が融合する国、中国はもちろん見所がたくさん！絶品の中華料理も是非体験して見ましょう。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menus" id="singapore">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/singapore.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">シンガポール</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                                corrupti eum perspiciatis minima maiores reiciendis obcaecati placeat eos dolores cum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menus" id="la">
+                <div class="photo-wrapper">
+                    <div class="layer"></div>
+                    <img src="img/la.jpg" alt="" class="photo">
+                    <div class="text">
+                        <h3 class="course-title">ロサンゼルス</h3>
+                        <div class="text-wrapper">
+                            <p class="text-contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea tempora
+                                asperiores magni quae quaerat. Corrupti aperiam eveniet beatae tempora eum!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.travel-menu').on('click', function () {
+            if (!$(this).hasClass('selected')) {
+                $(this).addClass('selected');
+                $(this).siblings().removeClass('selected');
+                if ($(this).attr('id') == 'domestic') {
+                    $('.domestic').addClass('at');
+                    $('.domestic-title').addClass('at');
+                    $('.abroad').removeClass('at');
+                    $('.abroad-title').removeClass('at');
+                } else {
+                    $('.domestic').removeClass('at');
+                    $('.domestic-title').removeClass('at');
+                    $('.abroad').addClass('at');
+                    $('.abroad-title').addClass('at');
+                }
+            }
+        });
+
+        $('.menus').hover(
+            function () {
+                $(this).find('.text-contents').show();
+            },
+            function () {
+                $(this).find('.text-contents').hide();
+            }
+        );
+    </script>
+</body>
+
+</html>

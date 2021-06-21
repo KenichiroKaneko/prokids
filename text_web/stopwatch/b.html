@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストップウォッチ</title>
+</head>
+
+<body>
+    <h1>ストップウォッチ</h1>
+    時間を計測するためのページです。
+
+    <h2>タイム</h2>
+    <div id="timer">0.00</div>
+    <input type="button" value="スタート" onclick="start();">
+    <input type="button" value="ストップ" onclick="">
+
+    <script>
+        var startTime;
+        var timerId;
+        var text = document.getElementById("timer");
+
+        function start() {
+            var startDate = new Date();
+            startTime = startDate.getTime();
+            timerId = setInterval(update, 10);
+        }
+
+        function update() {
+            var now = new Date();
+            var updateTime = now.getTime();
+            // ミリ秒を秒に直す
+            var timer = (updateTime - startTime) / 1000;
+            text.textContent = timer.toFixed(2);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

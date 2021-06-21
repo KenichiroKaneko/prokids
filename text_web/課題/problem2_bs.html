@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行予約ページ</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- bootstrap-datepickerを読み込む -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.min.css">
+
+    <style>
+        body {
+            background: url("img/cover.jpg");
+            background-size: cover;
+            /* background-repeat: no-repeat; */
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+
+        .navbar {
+            font-family: 'proxima-nova', sans-serif;
+            color: #598acf;
+        }
+
+        .input-wrapper {
+            z-index: 100;
+        }
+
+        #resister-btn {
+            background-color: #c1d4ef;
+            color: #2b689c;
+        }
+
+        .complete-msg {
+            text-align: center;
+            display: none;
+            background-color: lightgreen;
+            color: rgb(40, 136, 10);
+            width: 100%;
+            margin-top: 300px;
+        }
+
+        footer {
+            font-family: 'din-next-light';
+            color: #3b5c84;
+        }
+
+        .title {
+            font-family: 'din-next-light';
+        }
+
+        .layer {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layer"></div>
+    <nav class="navbar navbar-expand-lg bg-light ">
+        <div class="container">
+            <a class="navbar-brand" href="#">プロキッズ旅行</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">コース紹介 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">旅行のご予約</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    </div>
+
+    <div class="input-wrapper">
+        <div class="container text-white text-center">
+            <div class="input-group-prepend mt-5 mb-2 mx-1 d-inline-block">
+                <!-- <label for="courses" class="mx-4">コース:</label> -->
+                <select name="" id="courses" class="custom-select">
+                    <option selected>コース</option>
+                    <option value="1">京都寺院巡りコース</option>
+                    <option value="2">沖縄海水浴コース</option>
+                    <option value="3">イタリア古都巡りコース</option>
+                    <option value="4">中国都市観光コース</option>
+                </select>
+            </div>
+            <div class="input-group-prepend mb-2 mx-1 d-inline-block">
+                <!-- <label for="datepicker" class="mx-4">出発日:</label> -->
+                <input type="text" id="datepicker" placeholder="出発日" class="py-1">
+            </div>
+            <div class="input-group-prepend mb-2 mx-1 d-inline-block">
+                <!-- <label for="number" class="mx-4">人数　:</label> -->
+                <input type="number" name="" id="number" placeholder="人数" class="py-1">
+            </div>
+            <button type="button" id="resister-btn" class="btn d-inline-block py-1" data-toggle="modal"
+                data-target="#resister-modal">登録</button>
+        </div>
+    </div>
+
+    <div class="title text-center text-light">
+        <h1 class="m-4">RESERVATION</h1>
+        <h3 class="m-4">HAVE A NICE TRIP!</h3>
+    </div>
+
+    <div class="complete-msg">登録完了！</div>
+
+    <!-- モーダル -->
+    <div class="modal fade" id="resister-modal" tabindex="-1" role="dialog" aria-hidden="true"
+        aria-labelledby="resister-modal-label">
+        <!-- <div id="resister-form">
+            <h2>以下の内容で登録しますか？</h2>
+            <form action="#">
+                <p>コース: <span id="course"></span></p>
+                <p>出発日: <span id="date"></span></p>
+                <p>人数: <span id="num"></span>人</p>
+                <div class="btn cancel-btn">キャンセル</div>
+                    <div class="btn ok-btn">OK!</div>
+                <button type="button" class="btn btn-danger cancel-btn">キャンセル</button>
+                <button type="button" class="btn btn-primary ok-btn"></button>
+            </form>
+        </div> -->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resister-modal-label">以下の内容で登録しますか？</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>コース: <span id="course"></span></p>
+                    <p>出発日: <span id="date"></span></p>
+                    <p>人数: <span id="num"></span> 人</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">キャンセル</button>
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" id="ok-btn">OK!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-4 fixed-bottom">
+        Copyright ProkidsTravel.com
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript"
+        src="bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.ja.min.js"></script>
+
+
+    <script>
+        $('#datepicker').datepicker({
+            // changeMonth: true,
+            // changeYear: true,
+            // duration: 300,
+            // showAnim: 'show',
+            format: 'mm/dd/yyyy',
+            language: 'ja'
+        });
+
+        $('#resister-btn').on('click', function () {
+            var index = $('#courses').val();
+            var date = $('#datepicker').val();
+            var num = $('#number').val();
+            var course = $('option').eq(index).text();
+            $('#course').text(course);
+            $('#date').text(date);
+            $('#num').text(num);
+        });
+
+        // $('.resister-btn').click(function () {
+        //     var index = $('#courses').val();
+        //     var date = $('#datepicker').val();
+        //     var num = $('#number').val();
+        //     var course = $('option').eq(index).text();
+        //     $('#course').text(course);
+        //     $('#date').text(date);
+        //     $('#num').text(num);
+        //     $('.resister-modal-wrapper').fadeIn();
+        // });
+
+        // $('.cancel-btn').click(function () {
+        //     $('.resister-modal-wrapper').fadeOut();
+        // })
+
+        $('#ok-btn').on('click', function () {
+            $('.complete-msg').slideDown();
+            // $('.resister-modal-wrapper').fadeOut();
+            $('.input-wrapper').fadeOut();
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- ok-btnで　Uncaught TypeError: $(...).slideDown is not a function -->

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <!-- BootstrapCDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <img src="../img/logo.png" class="page-title" alt="">
+                <form class="form-inline ml-auto">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" id="search-word" type="text"
+                        placeholder="Search..." aria-label="Search">
+                </form>
+                <button class="btn search-btn text-light my-4 mr-3" id="search">検索</button>
+                <a href="resister.html" class="myPage btn text-light my-4">
+                    <i class="fas fa-user"></i>
+                    マイページ
+                </a>
+            </div>
+            <div class="container">
+                <div class="bc-nav mt-3">
+                    <a href="index.html">ホーム</a><span class="px-2">></span>お問い合わせ
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contact-form">
+            <div class="container p-4">
+                <h3 class="title p-3">お問い合わせフォーム</h3>
+                <div class="pl-4">
+                    お客様からのお問い合わせはこちらのフォームにて受け付けております。 <br>
+                    必須事項をご記入の上、送信ボタンを押してください。<br>
+                    <span class="necessary">*</span>：必須
+                </div>
+                <form class="mt-4 px-5 pt-3 pb-5" action="" style="background-color: whitesmoke;">
+                    <!-- required属性 -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="last-name">姓<span class="necessary">*</span>：</label>
+                            <div class="input-group mb-3">
+                                <input required type="text" id="last-name" class="form-control required" placeholder="姓"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="first-name">名<span class="necessary">*</span>：</label>
+                            <div class="input-group mb-3">
+                                <input required type="text" id="first-name" class="form-control required"
+                                    placeholder="名">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="email">メールアドレス<span class="necessary">*</span>：</label>
+                            <div class="input-group mb-3">
+                                <input required type="email" id="email" class="form-control required"
+                                    placeholder="メールアドレス">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="tel">電話番号：</label>
+                            <div class="input-group mb-3">
+                                <input type="tel" id="tel" class="form-control" placeholder="電話番号" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="zipcode">郵便番号：</label>
+                            <div class="input-group mb-3">
+                                <input type="text" name="zipcode" id="zipcode" class="form-control" maxlength="7"
+                                    placeholder="郵便番号">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-secondary" id="zip-btn">自動入力</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="prefecture">都道府県：</label>
+                            <div class="input-group mb-3">
+                                <input type="text" name="" id="prefecture" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="city">市区町村：</label>
+                            <div class="input-group mb-3">
+                                <input type="text" name="" id="city" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="banchi">番地・マンション名：</label>
+                            <div class="input-group mb-3">
+                                <input type="text" name="" id="banchi" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <label for="question">お問い合わせ内容<span class="necessary">*</span>：</label>
+                    <div class="input-group mb-3">
+                        <textarea required name="" id="question" rows="10" class="form-control required"></textarea>
+                    </div>
+                    <button class="btn rounded-pill text-light send-btn float-right px-5" id="send-btn">送信</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer style="background-color: whitesmoke;">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center p-4">
+                    <img src="../img/logo.png" class="page-title" alt="">
+                    <h3 class="sns-links m-4">
+                        <a href="#"><i class="fab fa-facebook" style="color: #3B5998;"></i></a>
+                        <a href="#"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                        <a href="#"><i class="fab fa-youtube" style="color: #DA1725;"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="color: #CF2E92;"></i></a>
+                    </h3>
+                </div>
+                <div class="col-4 p-4">
+                    <p>
+                        <a href="#" class="text-dark">国内旅行</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark">海外旅行</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark">目的から探す</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark">旅行関連サービス</a>
+                    </p>
+                </div>
+                <div class="col-4 p-4 text-center">
+                    <p>
+                        <a href="#" class="myPage btn text-light">
+                            <i class="fas fa-user"></i>
+                            マイページ
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-muted copyright pt-4 pb-2">
+            Copyright <i class="far fa-copyright"></i> Prokids Travel All Rights Reserved.
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

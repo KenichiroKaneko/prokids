@@ -1,0 +1,142 @@
+.page-title, .title, .price{
+    color: darkorange;
+    height: 100px;
+}
+
+.page-title{
+    cursor: pointer;
+}
+
+.myPage, .search-btn, .reserve-btn, .send-btn{
+    background-color: darkorange;
+    height: 40px;
+}
+
+.cover{
+    padding: 100px 0 150px 0;
+    position: relative;
+}
+
+#cover{
+    background: url(../img/cover.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#okinawa{
+    background: url(../img/okinawa.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+#singapore{
+    background: url(../img/singapore.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+#kyoto{
+    background: url(../img/kyoto.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+#china{
+    background: url(../img/china.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+#right-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5%;
+}
+
+#left-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5%;
+}
+
+.input-wrapper{
+    background-color: rgba(255,255,255,0.5);
+    width: 450px;
+}
+
+.notice-wrapper{
+    margin-bottom: 80px;
+}
+
+.information-wrapper {
+    background-color: whitesmoke;
+}
+
+.domestic-tour{
+    background-color: darkorange;
+}
+
+.overseas-tour{
+    background-color: green;
+}
+
+.notice{
+    background-color: royalblue;
+}
+
+.information-wrapper{
+    margin-bottom: 100px;
+}
+
+.card{
+    width: 18rem;
+}
+
+main{
+    margin-bottom: 100px;
+}
+
+.copyright{
+    font-family: "din-next-light";
+}
+
+.bc-nav {
+    font-size: 0.8rem;
+}
+
+.necessary {
+    color: red;
+}

@@ -1,0 +1,76 @@
+h2 {
+  margin: 150px 0 50px 50px;
+  font-family: serif;
+  color: #000;
+  font-size: 3rem;
+}
+img {
+  width: 300px;
+  height: 200px;
+}
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+.caption {
+  margin: 0;
+  padding: 4px 12px;
+  color: #000;
+  font-size: 10px;
+  font: regular 400;
+}
+.img-wrapper:hover {
+  transform: scale(1.1, 1.1);
+  transition: 1s;
+}
+form {
+  height: 50vh;
+  margin-bottom: 200px;
+}
+label {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="“text”"],
+input[type="“email”"],
+textarea {
+  background: #fff;
+  border: 1px #000 solid;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+input[type="“text”"],
+input[type="“email”"] {
+  width: 100%;
+  min-width: 240px;
+}
+textarea {
+  width: 100%;
+  min-width: 480px;
+  height: 6rem;
+}
+input[type="“submit”"] {
+  background: #e0e6ea;
+  width: 100px;
+  height: 50px;
+}
+.form1 {
+  justify-content: center;
+  /* display: flex; */
+}
+.btn-area input:hover {
+  background-color: green;
+  transition: 2s;
+}
+.wrapper {
+  background-color: black;
+  text-align: center;
+  padding: 50px, 0, 50px, 0;
+}
+.wrapper p {
+  font-size: 1.2rem;
+}

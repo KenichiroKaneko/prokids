@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=¥, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width :480px) {
+            h1:after {
+                content: "480px以下です。小さめです";
+            }
+        }
+
+        @media screen and (min-width:481px) and (max-width :720px) {
+            h1:after {
+                content: "481px以上720px以下です。中くらいです。";
+            }
+        }
+
+        @media screen and (min-width:721px) {
+            h1:after {
+                content: "721px以上です。大きいです。";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        デバイスの大きさは
+    </h1>
+    <script>
+        function hello() {
+            console.log("Hello World!");
+        }
+    </script>
+</body>
+
+</html>
